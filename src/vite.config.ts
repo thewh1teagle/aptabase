@@ -3,6 +3,7 @@ import path from "path";
 import mkcert from "vite-plugin-mkcert";
 import { defineConfig } from "vite";
 const pkg = require("./package.json");
+const backendUrl = process.env.VITE_BACKEND_URL ?? "https://localhost:5251";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -31,17 +32,17 @@ export default defineConfig({
     },
     proxy: {
       "/uploads": {
-        target: "https://localhost:5251",
+        target: backendUrl,
         changeOrigin: true,
         secure: false,
       },
       "/api": {
-        target: "https://localhost:5251",
+        target: backendUrl,
         changeOrigin: true,
         secure: false,
       },
       "/webhook": {
-        target: "https://localhost:5251",
+        target: backendUrl,
         changeOrigin: true,
         secure: false,
       },

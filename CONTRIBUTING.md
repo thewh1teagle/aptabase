@@ -15,6 +15,8 @@ That's it! You're ready to start writing some code 🚀
 
 **Note:** Emails are sent via Mailcatcher, the UI is available at `http://localhost:1080`
 
+**Tip:** To authenticate quickly during local development, you can generate a magic login link with `uv run scripts/create_auth_link.py --name "Your Name" --email you@example.com`. Install `uv` first: https://docs.astral.sh/uv/getting-started/installation/
+
 ## Getting some work done
 
 We have a very light process for contributing to Aptabase, simply find an issue you want to work on, ask for it to be assigned to you, and submit a PR when you're done. We'll review it and merge it as soon as possible. If you can't find an issue you want to work on, feel free to open one and we'll discuss it with you.

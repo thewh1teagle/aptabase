@@ -87,6 +87,8 @@ public class EnvSettings
 
     public static EnvSettings Load()
     {
+        DotNetEnv.Env.NoClobber().TraversePath().Load();
+
         var isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
         var region = isDevelopment ? "DEV" : Get("REGION").ToUpper();
         if (string.IsNullOrEmpty(region))
